@@ -10,7 +10,7 @@ const Favs = () => {
 
   return (
     <div className={`favorites ${state.theme}`}>
-      <h1>Tus Dentistas Favoritos</h1>
+      <h1>Your Favorite Dentists</h1>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}

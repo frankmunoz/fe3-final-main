@@ -15,14 +15,12 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validaciones
     if (formData.fullName.length < 5 || !formData.email.includes('@')) {
-      setError('Por favor, verifique su información nuevamente.');
+      setError('Please verify your information again.');
       setSuccess(false);
     } else {
       setError('');
       setSuccess(true);
-      // Lógica para enviar el formulario (puedes agregarlo aquí)
     }
   };
 
@@ -30,7 +28,7 @@ const Form = () => {
     <div className={`form ${state.theme}`}>
       <form onSubmit={handleSubmit}>
         <label>
-          Nombre Completo:
+          Full Name:
           <input
             type="text"
             name="fullName"
@@ -47,12 +45,12 @@ const Form = () => {
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Enviar</button>
+        <button type="submit">Send</button>
       </form>
       {error && <div className="error-message">{error}</div>}
       {success && (
         <div className="success-message">
-          Gracias {formData.fullName}, te contactaremos cuando antes vía mail.
+          Thank you {formData.fullName}, we will contact you as soon as possible via email.
         </div>
       )}
     </div>

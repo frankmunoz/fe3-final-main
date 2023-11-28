@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <main className={`home ${state.theme}`} >
-      <h1>Lista de Dentistas</h1>
+      <h1>List of Dentists</h1>
       <div className={`card-grid ${state.theme}`}>
         {state.data.map((dentist) => (
           <Link to={`/dentist/${dentist.id}`} key={dentist.id}>

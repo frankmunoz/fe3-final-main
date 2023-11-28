@@ -14,7 +14,7 @@ const Detail = () => {
   const dentist = state.data.find((d) => d.id === Number(id));
 
   if (!dentist) {
-    return <div>No se encontró información para este dentista.</div>;
+    return <div>No information found for this dentist.</div>;
   }
   return (
     <>
@@ -26,8 +26,8 @@ const Detail = () => {
         <h2>{dentist.name}</h2>
         <p>Username: {dentist.username}</p>
         <p>Email: {dentist.email}</p>
-        <p>Teléfono: {dentist.phone}</p>
-        <p>Sitio web: {dentist.website}</p>
+        <p>Phone: {dentist.phone}</p>
+        <p>Website: {dentist.website}</p>
       </div>
     </>
   )
