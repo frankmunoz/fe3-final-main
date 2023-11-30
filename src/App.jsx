@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Route,
   Routes,
@@ -14,11 +14,15 @@ import Favorites from "./Routes/Favs";
 import NotFound from "./Routes/NotFound";
 
 function App() {
+  const [title] = useState('🚀🐼🦷 Rocket Panda Dentistry 🦝🐼🦷');
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);  
   return (
     <Router>
+      <Navbar />
       <div className="App">
-        <Navbar />
-
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/dentist/:id" element={<DentistDetail/>}/>
@@ -26,7 +30,6 @@ function App() {
           <Route path="/favs" element={<Favorites/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
-
         <Footer />
       </div>
     </Router>

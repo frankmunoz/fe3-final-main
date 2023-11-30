@@ -18,6 +18,7 @@ const appReducer = (state, action) => {
 export const initialState = {
   theme: localStorage.getItem('theme') || 'light',
   data: [],
+  favorites: [],
 };
 
 export const GlobalContext = createContext();

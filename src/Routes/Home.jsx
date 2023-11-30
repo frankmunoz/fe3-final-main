@@ -24,9 +24,7 @@ const Home = () => {
       <h1>List of Dentists</h1>
       <div className={`card-grid ${state.theme}`}>
         {state.data.map((dentist) => (
-          <Link to={`/dentist/${dentist.id}`} key={dentist.id}>
-            <Card key={dentist.id} dentist={dentist} />
-          </Link>
+          <Card key={dentist.id} dentist={dentist} />
         ))}
       </div>
     </main>

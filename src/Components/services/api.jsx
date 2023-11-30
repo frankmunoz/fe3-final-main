@@ -4,12 +4,12 @@ const fetchData = async () => {
   try {
     const response = await fetch(apiUrl);
     if (!response.ok) {
-      throw new Error('Error al obtener los datos');
+      throw new Error('Error getting data');
     }
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Error de red:', error);
+    console.error('Network error:', error);
     throw error;
   }
 };

@@ -1,6 +1,6 @@
 // Navbar.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom'; 
 import { ContextGlobal } from '../Components/utils/global.context';
 
 const Navbar = () => {
@@ -14,22 +14,33 @@ const Navbar = () => {
   const themeClass = state.theme === 'dark' ? 'dark' : 'light';
 
   return (
-    <nav className={themeClass}>
-      <div className='navegador'>
-        <ul>
-          <li>
-            <Link to='/'>Inicio</Link>
-          </li>
-          <li>
-            <Link to='/contact'>Contacto</Link>
-          </li>
-          <li>
-            <Link to='/favs'>Favoritos</Link>
-          </li>
-        </ul>
+    <header>
+      <div>
+        <h1>
+          <NavLink to='/' end>
+            🚀🐼🦷 Rocket Panda Dentistry 🦝🐼🦷
+          </NavLink>
+        </h1>
+        <nav className={themeClass}>
+          <div>
+            <ul className='nav'>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/contact'>Contact</Link>
+              </li>
+              <li>
+                <Link to='/favs'>Favorites</Link>
+              </li>
+            </ul>
+            <div class="nav-right">
+             <button className='theme-switch' onClick={handleThemeChange}>Change theme</button>
+            </div>
+          </div>
+        </nav>
       </div>
-      <button onClick={handleThemeChange}>Cambiar Tema</button>
-    </nav>
+    </header>    
   );
 };
 
