@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { ContextGlobal } from '../Components/utils/global.context';
 
+import './css/form.css'
+
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
   const { state } = ContextGlobal();
