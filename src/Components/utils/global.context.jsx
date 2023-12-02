@@ -21,18 +21,7 @@ const appReducer = (state, action) => {
       return {
         ...state,
         favorites: action.payload,
-      };      
-    case ADD_FAVORITE:
-      return {
-        ...state,
-        favorites: [...state.favorites, action.payload],
-      };
-    case REMOVE_FAVORITE:
-      console.log('state.favorites=====>',state.favorites);
-      return {
-        ...state,
-        favorites: state.favorites.filter((id) => id !== action.payload),
-      };      
+      };  
     default:
       return state;
   }

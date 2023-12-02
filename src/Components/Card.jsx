@@ -18,11 +18,9 @@ const Card = ({ dentist }) => {
 
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    dispatch({ type: 'INIT_FAVORITES', payload: storedFavorites });
   }, []); 
 
   const toggleFavorite = () => {
-    dispatch({ type: "TOGGLE_FAVORITE", payload: dentist.id });
     const favorites = JSON.parse(localStorage.getItem("favorites")) || {};
     if (heartColor === '❤️') {
       delete favorites[dentist.id];
