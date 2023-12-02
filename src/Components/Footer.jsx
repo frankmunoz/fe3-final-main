@@ -5,9 +5,8 @@ import { ContextGlobal } from '../Components/utils/global.context';
 import './css/footer.css'
 
 const Footer = () => {
-  const { state, dispatch } = ContextGlobal();
+  const { state } = ContextGlobal();
   const themeClass = state.theme === 'dark' ? 'dark' : 'light';
-console.log(themeClass);
   return (
     <footer className={`${themeClass}`}>
       <div className={`bottom ${themeClass}`}>

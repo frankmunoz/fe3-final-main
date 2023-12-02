@@ -1,7 +1,6 @@
 
 import React, { useEffect } from 'react';
 import Card from '../Components/Card';
-import { Link } from 'react-router-dom';
 
 import { fetchData } from '../Components/services/api';
 import { ContextGlobal } from '../Components/utils/global.context';
@@ -24,7 +23,10 @@ const Home = () => {
       <h1>List of Dentists</h1>
       <div className={`card-grid ${state.theme}`}>
         {state.data.map((dentist) => (
-          <Card key={dentist.id} dentist={dentist} />
+          <Card 
+            key={dentist.id} 
+            dentist={dentist} 
+          />
         ))}
       </div>
     </main>
